@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Milly",
+    "slug": "Milly-App",
+    "version": "1.8.3",
+    "orientation": "portrait",
+    "icon": "./assets//splash.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.wwis.millie",
+      "buildNumber": "1.0.1",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to upload checks for mobile deposit",
+        "NSFaceIDUsageDescription": "Face ID allows you to log into mTeller using facial recognition instead of your username and password."
+      },
+      "requireFullScreen": true
+    },
+    "android": {
+      "package": "com.wwis.milly",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/splash.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "499c5b35-54d5-444c-86d0-5a4aec41039f"
+      }
+    },
+    "plugins": [
+      "sentry-expo"
+    ]
+  },
+  "hooks": {
+    "postPublish": [
+      {
+        "file": "sentry-expo/upload-sourcemaps",
+        "config": {
+          "organization": "personal-ht0",
+          "project": "Milly",
+          "authToken": "c7579a6f63494b6c8ba2338b5f1ccc55b3335fd968af40598d8a44b48c9acc67"
+        }
+      }
+    ]
+  }
+}

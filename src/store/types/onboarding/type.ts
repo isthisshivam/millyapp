@@ -1,0 +1,33 @@
+export type UserInfoType = {
+  firstName: string;
+  lastName: string;
+  address1: string;
+  address2: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+  gender: string;
+  email: string;
+  mobilePhone: string;
+  birthday: string;
+  homePhone: string;
+  workPhone: string;
+  cellPhone: string;
+};
+export type initialStateType = {
+  status: boolean | string;
+  loading: boolean;
+  error: string | object;
+  message: string;
+  idVerified: boolean;
+  failedVerify: boolean;
+  attempts: number;
+  selfieAttempts: 0;
+  failedSelfie: boolean;
+  selfieVerified: boolean;
+  requestId: undefined;
+  documentVerificationResult: undefined;
+  selfie: string;
+  info: UserInfoType;
+};
